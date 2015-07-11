@@ -91,7 +91,7 @@
 		E260EBC31B4F66E100526A84 /* LRRadarTest */ = {
 			isa = PBXGroup;
 			children = (
-				E260EBEA1B4F66FF00526A84 /* XHRadarView */,
+				E260EBEA1B4F66FF00526A84 /* LRRadarView */,
 				E260EBC81B4F66E100526A84 /* AppDelegate.h */,
 				E260EBC91B4F66E100526A84 /* AppDelegate.m */,
 				E260EBCB1B4F66E100526A84 /* ViewController.h */,
@@ -131,7 +131,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		E260EBEA1B4F66FF00526A84 /* XHRadarView */ = {
+		E260EBEA1B4F66FF00526A84 /* LRRadarView */ = {
 			isa = PBXGroup;
 			children = (
 				E260EBEB1B4F66FF00526A84 /* LRRadarIndicatorView.h */,
@@ -141,6 +141,7 @@
 				E260EBEF1B4F66FF00526A84 /* LRRadarView.h */,
 				E260EBF01B4F66FF00526A84 /* LRRadarView.m */,
 			);
+			name = LRRadarView;
 			path = XHRadarView;
 			sourceTree = "<group>";
 		};
@@ -432,6 +433,7 @@
 				E260EBE61B4F66E100526A84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E260EBE71B4F66E100526A84 /* Build configuration list for PBXNativeTarget "LRRadarTestTests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +442,7 @@
 				E260EBE91B4F66E100526A84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

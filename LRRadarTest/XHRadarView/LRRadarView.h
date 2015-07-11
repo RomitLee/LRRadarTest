@@ -49,7 +49,7 @@
 - (NSInteger)numberOfSectionsInRadarView:(LRRadarView *)radarView;
 - (NSInteger)numberOfPointsInRadarView:(LRRadarView *)radarView;
 - (LRRadarPointView *)radarView:(LRRadarView *)radarView viewForIndex:(NSUInteger)index;       //自定义目标点视图
-- (CGPoint)radarView:(LRRadarView *)radarView positionForIndex:(NSUInteger)index;    //目标点所在位置
+
 
 @end
 

@@ -86,18 +86,18 @@
     return 4;
 }
 - (NSInteger)numberOfPointsInRadarView:(LRRadarView *)radarView {
-    return [self.pointsArray count];
+    return 5;
 }
 - (LRRadarPointView *)radarView:(LRRadarView *)radarView viewForIndex:(NSUInteger)index {
     LRRadarPointView *pointView=[[LRRadarPointView alloc]initWithFrame:CGRectMake(0, 0, 40, 40)];
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
-    NSString *images=[NSString stringWithFormat:@"%u",arc4random()%10];
+    NSString *images=[NSString stringWithFormat:@"%u",arc4random()%9];
     [imageView setImage:[UIImage imageNamed:[NSString stringWithFormat:@"qq%@",images]]];
     imageView.contentMode=UIViewContentModeScaleToFill;
     [pointView addSubview:imageView];
     
     NSString *jiaodu=[NSString stringWithFormat:@"%d",arc4random()%360];
-    int radarradius=self.radarView.radius-self.radarView.imgradius-20;//雷达半径-头像半径-poing半径，表示在雷达中，头像外；
+    int radarradius=self.radarView.radius-self.radarView.imgradius-40;//雷达半径-头像半径-poing半径，表示在雷达中，头像外；
     int iamgeRadius=self.radarView.imgradius+20;
     int banban=(arc4random()%radarradius)+iamgeRadius;
     NSString *banjing=[NSString stringWithFormat:@"%d",banban];
@@ -107,10 +107,7 @@
     
     return pointView;
 }
-- (CGPoint)radarView:(LRRadarView *)radarView positionForIndex:(NSUInteger)index {
-    NSArray *point = [self.pointsArray objectAtIndex:index];
-    return CGPointMake([point[0] floatValue], [point[1] floatValue]);
-}
+
 
 #pragma mark - XHRadarViewDelegate
 

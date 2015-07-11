@@ -175,7 +175,7 @@
         //添加每一个点数
         for (int index=0; index<pointsNum; index++) {
             if (self.dataSource && [self.dataSource respondsToSelector:@selector(radarView:viewForIndex:)]) {
-                if (self.dataSource && [self.dataSource respondsToSelector:@selector(radarView:positionForIndex:)]) {
+                
                     //CGPoint point = [self.dataSource radarView:self positionForIndex:index];
                     
                     
@@ -185,6 +185,9 @@
                     
                     
                     pointView.tag = index;
+                    
+                    pointView.layer.cornerRadius=pointView.frame.size.width/2;
+                    pointView.layer.masksToBounds=YES;
                     
                     //蛋疼的求坐标点
                     pointView.center = CGPointMake(self.center.x+posDistance*cos(posDirection*M_PI/180), self.center.y+posDistance*sin(posDirection*M_PI/180));
@@ -198,11 +201,11 @@
                     
                     CGAffineTransform toTransform = CGAffineTransformConcat(pointView.transform,  CGAffineTransformInvert(pointView.transform));
                     
-                    double delayInSeconds = 0.05*index;
+                    double delayInSeconds = 0.85*index;
                     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
                     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
                         [UIView beginAnimations:nil context:NULL];
-                        [UIView setAnimationDuration:0.3];
+                        [UIView setAnimationDuration:1.3];
                         pointView.alpha = 1.0;
                         [pointView setTransform:toTransform];
                         [UIView commitAnimations];
@@ -210,7 +213,7 @@
                     
                     [self.pointsView addSubview:pointView];
                                         
-                }
+                
             }
         }
     }
