@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@protocol LRRadarPointViewDelegate;
+
 
 @interface LRRadarPointView : UIView
 
@@ -16,15 +16,9 @@
 @property (nonatomic,strong) NSString *PointRadius;//距离终点的距离
 
 
-@property (nonatomic, assign) id <LRRadarPointViewDelegate> delegate;        //委托
 
 @end
 
-@protocol LRRadarPointViewDelegate <NSObject>
-@optional
 
-- (void)didSelectItemRadarPointView:(LRRadarPointView *)radarPointView; //点击事件
-
-@end
 
 

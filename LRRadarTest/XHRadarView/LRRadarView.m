@@ -226,13 +226,7 @@
     
 }
 
-#pragma mark - XHRadarPointViewDelegate
-- (void)didSelectItemRadarPointView:(LRRadarPointView *)radarPointView {
-    NSLog(@"select point %d", radarPointView.tag);
-    if (self.delegate && [self.delegate respondsToSelector:@selector(radarView:didSelectItemAtIndex:)]) {
-        [self.delegate radarView:self didSelectItemAtIndex:radarPointView.tag];
-    }
-}
+
 
 
 @end

@@ -18,17 +18,6 @@
 }
 */
 
-#pragma mark - select point
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    UITouch *touch = [touches anyObject];
-    
-    if(touch.tapCount == 1)
-    {
-        if (self.delegate && [self.delegate respondsToSelector:@selector(didSelectItemRadarPointView:)]) {
-            [self.delegate didSelectItemRadarPointView:self];
-        }
-    }
-}
+
 
 @end
