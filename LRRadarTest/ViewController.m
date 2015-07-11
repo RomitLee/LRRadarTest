@@ -86,7 +86,7 @@
     return 4;
 }
 - (NSInteger)numberOfPointsInRadarView:(LRRadarView *)radarView {
-    return 5;
+    return 8;
 }
 - (LRRadarPointView *)radarView:(LRRadarView *)radarView viewForIndex:(NSUInteger)index {
     LRRadarPointView *pointView=[[LRRadarPointView alloc]initWithFrame:CGRectMake(0, 0, 40, 40)];
