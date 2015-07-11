@@ -200,12 +200,14 @@
                     [pointView setTransform:fromTransform];
                     
                     CGAffineTransform toTransform = CGAffineTransformConcat(pointView.transform,  CGAffineTransformInvert(pointView.transform));
-                    
-                    double delayInSeconds = 0.85*index;
+                
+                    //int jiange=arc4random()%30;
+                
+                    double delayInSeconds = 2*index;
                     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
                     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
                         [UIView beginAnimations:nil context:NULL];
-                        [UIView setAnimationDuration:1.3];
+                        [UIView setAnimationDuration:1.5];
                         pointView.alpha = 1.0;
                         [pointView setTransform:toTransform];
                         [UIView commitAnimations];
