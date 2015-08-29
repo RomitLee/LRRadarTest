@@ -191,7 +191,7 @@
                     
                     //蛋疼的求坐标点
                     pointView.center = CGPointMake(self.center.x+posDistance*cos(posDirection*M_PI/180), self.center.y+posDistance*sin(posDirection*M_PI/180));
-                    pointView.delegate = self;
+                    //pointView.delegate = self;
                     
                     //动画
                     pointView.alpha = 0.0;

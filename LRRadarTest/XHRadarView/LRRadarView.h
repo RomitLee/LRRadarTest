@@ -16,7 +16,7 @@
 @protocol LRRadarViewDataSource;
 @protocol LRRadarViewDelegate;
 
-@interface LRRadarView : UIView <LRRadarPointViewDelegate> {
+@interface LRRadarView : UIView  {
     
 }
 
