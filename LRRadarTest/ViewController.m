@@ -35,7 +35,7 @@
     radarView.backgroundImage = [UIImage imageNamed:@"140"];
     radarView.PersonImage=[UIImage imageNamed:@"qq7"];
     
-    radarView.labelText = @"正在搜索附近的目标";
+    radarView.labelText = @"正在搜索附近的目标!!!!";
     [self.view addSubview:radarView];
     _radarView = radarView;
 
